@@ -1,49 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.nav-bar{
+
+.navegacion{
     width: 90%;
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
 }
 
-
-.nav-bar ul{
+.navegacion ul{
     list-style: none;
+}
+
+.menu > li{
+    /* position: relative; */
+    display: inline-block;
+}
+
+.menu > li > a{
+    display: block;
+    padding: 0px 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu li a:hover{
+    color: red;
+    transition: all .3s;
+    
+
+}
+
+/* submenu */
+
+.submenu{
+    position: absolute;
+    background: grey;
+    border-radius: 10px;
+    display: none;
     
 }
 
-.nav-bar .logo{
-    cursor: pointer;
-}
 
-.nav-bar .menu{
+.submenu li a{
+    display: block;
+    padding: 5px;
+    color: #000;
     display: flex;
-
-}
-
-.nav-bar .menu li{
-    margin: 0px  10px;
-
-}
-
-
-/*  submenu */
-
-.submenu{
-    width: 70px;
-    position: absolute;
-    background: red;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 1s;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .menu li:hover .submenu{
-    visibility: visible;
-    opacity: 1;
+
+    display: block;
+}
+
+
+/* TEAMS */
+
+
+/* .teams .title::after{
+    content: "who with me";
+}
+ */
+
+.title{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+
+.max-width{
+    background: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.teams .carousel{
+    padding:  50px;
+    display: flex;
+}
+
+.teams .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover{
+    background: crimson;
+}
+
+.teams .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+
+.teams .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.teams .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    
+}
+
+.teams .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all .3s ease;
+}
+
+
+.teams .carousel .card:hover img{
+    border-color: #fff;
+}
+
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px ;;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all .3s ease;
+}
+
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover{
+    background: crimson!important;
 }
